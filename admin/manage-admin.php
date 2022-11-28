@@ -22,6 +22,23 @@
                         echo $_SESSION['update'];  //Displaying Session Message
                         unset($_SESSION['update']); //Removeing Session MEessage
                     }
+
+                    if(isset($_SESSION['user-not-found'])){
+                        echo $_SESSION['user-not-found'];  //Displaying Session Message
+                        unset($_SESSION['user-not-found']); //Removeing Session MEessage
+                    }
+
+                    if(isset($_SESSION['password-not-match'])){
+                        echo $_SESSION['password-not-match'];  //Displaying Session Message
+                        unset($_SESSION['password-not-match']); //Removeing Session MEessage
+                    }
+
+                    if(isset($_SESSION['change-pwd'])){
+                        echo $_SESSION['change-pwd'];  //Displaying Session Message
+                        unset($_SESSION['change-pwd']); //Removeing Session MEessage
+                    }
+
+
                 ?>
                 <br/> <br/> <br/>
 
