@@ -148,3 +148,13 @@ table tr td {
     background-color: var(--red);
     color: var(--white);
 }
+
+
+/* css for login */
+
+.login {
+    border: 1px solid var(--grey);
+    width: 23%;
+    margin: 5% auto;
+    padding: 2%;
+}
