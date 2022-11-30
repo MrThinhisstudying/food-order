@@ -13,6 +13,37 @@
             echo $_SESSION['add'];  //Displaying Session Message
             unset($_SESSION['add']); //Removeing Session MEessage
         }
+
+        if (isset($_SESSION['remove'])) {
+            echo $_SESSION['remove'];  //Displaying Session Message
+            unset($_SESSION['remove']); //Removeing Session MEessage
+        }
+
+        if (isset($_SESSION['delete'])) {
+            echo $_SESSION['delete'];  //Displaying Session Message
+            unset($_SESSION['delete']); //Removeing Session MEessage
+        }
+
+        if (isset($_SESSION['no-category-found'])) {
+            echo $_SESSION['no-category-found'];  //Displaying Session Message
+            unset($_SESSION['no-category-found']); //Removeing Session MEessage
+        }
+
+        if (isset($_SESSION['update'])) {
+            echo $_SESSION['update'];  //Displaying Session Message
+            unset($_SESSION['update']); //Removeing Session MEessage
+        }
+
+        if (isset($_SESSION['upload'])) {
+            echo $_SESSION['upload'];  //Displaying Session Message
+            unset($_SESSION['upload']); //Removeing Session MEessage
+        }
+
+        if (isset($_SESSION['failed-remove'])) {
+            echo $_SESSION['failed-remove'];  //Displaying Session Message
+            unset($_SESSION['failed-remove']); //Removeing Session MEessage
+        }
+        
         ?>
 
         <br />
@@ -82,8 +113,8 @@
                         <td><?php echo $featured; ?></td>
                         <td><?php echo $active; ?></td>
                         <td>
-                            <a href="#" class="btn-secondary">Update Category</a>
-                            <a href="#" class="btn-danger">Delete Category</a>
+                            <a href="<?php echo SITEURL; ?>admin/update-category.php?id=<?php echo $id;?>"class="btn-secondary">Update Category</a>
+                            <a href="<?php echo SITEURL; ?>admin/delete-category.php?id=<?php echo $id;?>&image_name=<?php echo$image_name;?>"class="btn-danger">Delete Category</a>
 
                         </td>
                     </tr>
