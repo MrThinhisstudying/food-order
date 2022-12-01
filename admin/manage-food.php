@@ -28,15 +28,17 @@
                         unset($_SESSION['upload']); //Removeing Session MEessage
                     }
 
-                    if (isset($_SESSION[' unauthorize'])) {
-                        echo $_SESSION[' unauthorize'];  //Displaying Session Message
-                        unset($_SESSION[' unauthorize']); //Removeing Session MEessage
+                    if (isset($_SESSION['unauthorize'])) {
+                        echo $_SESSION['unauthorize'];  //Displaying Session Message
+                        unset($_SESSION['unauthorize']); //Removeing Session MEessage
                     }
 
-                    if (isset($_SESSION[' update'])) {
-                        echo $_SESSION[' update'];  //Displaying Session Message
-                        unset($_SESSION[' update']); //Removeing Session MEessage
+                    if (isset($_SESSION['update'])) {
+                        echo $_SESSION['update'];  //Displaying Session Message
+                        unset($_SESSION['update']); //Removeing Session MEessage
                     }
+
+                    
 
                 ?>
 

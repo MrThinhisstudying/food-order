@@ -51,7 +51,7 @@
                 <tr>
                     <td>Description: </td>
                     <td>
-                    <textarea name="description" cols="30" rows="5"> <?php echo htmlspecialchars($description);?></textarea>
+                    <textarea name="description" cols="30" rows="5"> <?php echo $description;?></textarea>
                     </td>
                 </tr>
 
@@ -168,9 +168,8 @@ if(isset($_POST['submit']))
    $title = $_POST['title'];
    $description = $_POST['description'];
    $price = $_POST['price'];
-   $current_image = $_POST['image_name'];
+   $current_image = $_POST['current_image'];
    $category = $_POST['category'];
-
    $featured = $_POST['featured'];
    $active = $_POST['active'];
 
@@ -209,7 +208,7 @@ if(isset($_POST['submit']))
                //Set message
                $_SESSION['upload'] = "<div class='error'> Failed to Upload new Image </div>/";
                //Redirect the user
-               header("location: " . SITEURL . 'admin/food-category.php');
+               header("location: " . SITEURL . 'admin/manage-food.php');
                //Stop the process
                die();
            }
@@ -266,6 +265,7 @@ if(isset($_POST['submit']))
        $_SESSION['update'] = "<div class='success text-center'>Food Update Successfully </div>";
        //Redirect the user
        header("location: " . SITEURL . 'admin/manage-food.php');
+       
    }
    else
    {
@@ -274,16 +274,8 @@ if(isset($_POST['submit']))
        header("location: " . SITEURL . 'admin/manage-food.php');
    }
 }
-else
-{
-
-}           
-
-
-
+         
         ?>
-
-
     </div>
 </div>
 <?php include('partials/footer.php'); ?>

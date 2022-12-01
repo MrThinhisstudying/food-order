@@ -47,6 +47,7 @@
                         //Create PHP code to display categories from database
                         //1. Create SQL to get all active categories from database
                         $sql = "SELECT * FROM tbl_category WHERE active='YES'";
+                        
 
                         //Executing query
                         $res = mysqli_query($conn, $sql);
@@ -65,9 +66,7 @@
                                 $title = $row ['title'];
 
                                 ?>
-
-                                <option value="<?php $id; ?>"><?php echo $title; ?></option>
-                                
+                                <option value="<?php $id; ?>"><?php echo $title;?></option>
                                 <?php
                             }
                         }
@@ -119,13 +118,13 @@
                             {
                                 //Add the food in database
                                 //echo "clicked";
-
+                                
                                 //1. Get the Data from form 
                                 $title = $_POST['title'];
                                 $description = $_POST['description'];
                                 $price = $_POST['price'];
                                 $category = $_POST['category'];
-
+                               
                                 //Check whether radio button for featured and active are checked or not
                                 if(isset($_POST['featured']))
                                 {
@@ -148,7 +147,7 @@
 
 
                                 //2. Upload the image if selected
-                                //Check whether the slect image is clicked or not and upload the image only if the image is selected
+                                //Check whether the select image is clicked or not and upload the image only if the image is selected
                                 if(isset($_FILES['image']['name']))
                                 {
                                     //Get the details of the selected image
@@ -159,8 +158,9 @@
                                     {
                                         //image is selected
                                         //A.Rename the image
-                                        //Get the extension of selected image(jpgm png, gif, etc,.)
-                                        $ext = end(explode('.',$image_name));
+                                        //Get the extension of selected image(jpg png, gif, etc,.)
+                                        $tmp = explode('.',$image_name);
+                                        $ext = end($tmp);
                                          //Create new name for image  
                                         $image_name ="Food_name_".rand(0000,9999).'.'.$ext; //e.g. Food_Category_834.jpg
 
@@ -201,12 +201,13 @@
                                 $sql2= "INSERT INTO tbl_food SET
                                         title = '$title',
                                         description = '$description',
-                                        price = $price,
+                                        price = '$price',
                                         image_name = '$image_name',
                                         category_id = '$category',
                                         featured = '$featured',
                                         active = '$active'
                                 ";
+                                //echo $sql2; die();
 
                                 //Execute the query
                                 $res2 = mysqli_query($conn, $sql2);
@@ -220,6 +221,7 @@
                                     $_SESSION['add'] = "<div class='success text-center'>Food Added Successfully </div>";
                                     //Redirect the user
                                     header("location: " . SITEURL . 'admin/manage-food.php');
+                                    
                                 }
                                 else
                                 {
