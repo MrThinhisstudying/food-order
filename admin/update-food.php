@@ -115,7 +115,7 @@
                                 $category_id = $row ['id'];
                                 
                                 ?>
-                                <option value="<?php $category_id; ?>"><?php echo $category_title; ?>
+                                <option value="<?php echo $category_id; ?>"><?php echo $category_title; ?>
                             
                                 </option>
                                 <?php

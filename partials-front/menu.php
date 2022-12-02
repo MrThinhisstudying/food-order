@@ -18,23 +18,23 @@
         <div class="container">
             <div class="logo">
                 <a href="<?php echo SITEURL; ?>index.php" title="Logo">
-                    <img src="images/logo.png" alt="Restaurant Logo" class="img-responsive">
+                    <img src="images/logo_food.png" alt="Restaurant Logo" class="img-responsive">
                 </a>
             </div>
 
             <div class="menu text-right">
                 <ul>
                     <li>
-                        <a href="<?php echo SITEURL; ?>index.php">Home</a>
+                        <a href="<?php echo SITEURL; ?>index.php">Trang chủ</a>
                     </li>
                     <li>
-                        <a href="<?php echo SITEURL; ?>categories.php">Categories</a>
+                        <a href="<?php echo SITEURL; ?>categories.php">Thực đơn</a>
                     </li>
                     <li>
-                        <a href="<?php echo SITEURL; ?>foods.php">Foods</a>
+                        <a href="<?php echo SITEURL; ?>foods.php">Món ăn</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="#">Món ăn</a>
                     </li>
                 </ul>
             </div>

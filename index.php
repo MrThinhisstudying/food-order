@@ -25,7 +25,7 @@ if (isset($_SESSION['order'])) {
 <!-- CAtegories Section Starts Here -->
 <section class="categories">
     <div class="container">
-        <h2 class="text-center">Explore Foods</h2>
+        <h2 class="text-center">Best Seller</h2>
 
         <?php
         //Create SQL Query to display categories from database
@@ -55,12 +55,12 @@ if (isset($_SESSION['order'])) {
                         } else {
                             //image available 
                         ?>
-                            <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" alt="Pizza" class="img-responsive img-curve">
+                            <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" alt="<?php echo $image_name; ?>" class="img-responsive img-curve">
 
                         <?php
                         }
                         ?>
-                        <h3 class="float-text text-white"><?php echo $title; ?></h3>
+                        
                     </div>
                 </a>
         <?php
@@ -83,7 +83,7 @@ if (isset($_SESSION['order'])) {
 <!-- fOOD MEnu Section Starts Here -->
 <section class="food-menu">
     <div class="container">
-        <h2 class="text-center">Food Menu</h2>
+        <h2 class="text-center">Thực đơn món ăn</h2>
 
         <?php
         //Getting foods from database that are active and featured
@@ -150,7 +150,7 @@ if (isset($_SESSION['order'])) {
     </div>
 
     <p class="text-center">
-        <a href="#">See All Foods</a>
+        <a href="<?php echo SITEURL; ?>foods.php">See All Foods</a>
     </p>
 </section>
 <!-- fOOD Menu Section Ends Here -->
