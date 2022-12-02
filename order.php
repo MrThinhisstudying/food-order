@@ -145,19 +145,20 @@
 
             //Execute the query
             $res2 = mysqli_query($conn, $sql2);
+            // echo $res2; die();
 
             //Check whether query executed successfully or not
             if($res2 == true)
             {
-                //querry executed and order saved 
-                $_SESSION['order'] = "<div class='success'>Food Ordered Successfully</div>";
-                header('location'.SITEURL);
+                //query executed and order saved 
+                $_SESSION['order'] = "<div class='success text-center'>Food Ordered Successfully</div>";
+                header('location: '.SITEURL);
             } 
             else
             {
                 //Failed to save order
-                $_SESSION['order'] = "<div class='error'>Failed to Order Food.</div>";
-                header('location'.SITEURL);
+                $_SESSION['order'] = "<div class='error' text-center>Failed to Order Food.</div>";
+                header('location: '.SITEURL);
             }
         }
    ?>
