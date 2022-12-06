@@ -57,7 +57,7 @@
 
                     <?php
                     //Query to get adll admin
-                        $sql = "SELECT* FROM tbl_admin";
+                        $sql = "SELECT* FROM tbl_admin Group by full_name ASC";
 
                         //excute the quey
                         $res = mysqli_query($conn, $sql);

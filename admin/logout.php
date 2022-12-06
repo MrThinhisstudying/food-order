@@ -6,5 +6,5 @@
     session_destroy();
 
     //2. Redirect to Login Page
-    header('location: ' .SITEURL.'admin/login.php');
+    header('location: ' .SITEURL.'admin/login_admin.php');
 ?>

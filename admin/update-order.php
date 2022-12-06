@@ -79,8 +79,8 @@
                     <td>
                         <select name="status">
                             <option <?php if($status == "Ordered"){echo"selected";} ?> value="Ordered">Ordered</option>
-                            <option <?php if($status == "On Delivery"){echo"selected";} ?>value="On Delevery">On Delivery</option>
-                            <option <?php if($status == "Delivery"){echo"selected";} ?>value="Delevered">Delivery</option>
+                            <option <?php if($status == "On Delivery"){echo"selected";} ?>value="On Delivery">On Delivery</option>
+                            <option <?php if($status == "Delivery"){echo"selected";} ?>value="Delivered">Delivery</option>
                             <option <?php if($status == "Cancelled"){echo"selected";} ?>value="Cancelled">Cancelled</option>
                         </select>
                     </td>
@@ -138,10 +138,17 @@
                 $qty = $_POST['qty'];
                 $total = $price * $qty;
                 $status = $_POST['status'];
-                $customer_name = $_POST['customer_name'];
-                $customer_contact = $_POST['customer_contact'];
-                $customer_email = $_POST['customer_email'];
-                $customer_address = $_POST['customer_address'];
+                if(isset($_POST['customer_name']) || isset($_POST['customer_contact']) || isset($_POST['customer_email']) || isset($_POST['customer_address']))
+                {
+                    $customer_name = $_POST['customer_name'];
+                    $customer_contact = $_POST['customer_contact'];
+                    $customer_email = $_POST['customer_email'];
+                    $customer_address = $_POST['customer_address'];
+                }
+                
+                
+                
+                
                 
                 //Update the values
                 $sql2 = "UPDATE tbl_order SET
@@ -154,6 +161,8 @@
                     customer_address = '$customer_address'
                     WHERE id = $id
                 " ;
+
+                
 
                 //Execute the query
                 $res2 = mysqli_query($conn, $sql2);

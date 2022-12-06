@@ -20,7 +20,7 @@
     <!-- footer Section Starts Here -->
     <section class="footer">
         <div class="container text-center">
-            <p>All rights reserved. Designed By <a href="#">Team Phantom</a></p>
+            <p>Cảm ơn quý khách đã sử dụng dịch vụ của chúng tôi</p>
         </div>
     </section>
     <!-- footer Section Ends Here -->

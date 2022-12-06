@@ -141,7 +141,7 @@
             ";
 
             //Test
-            //echo $sql2; die();
+            // echo $sql2; die();
 
             //Execute the query
             $res2 = mysqli_query($conn, $sql2);

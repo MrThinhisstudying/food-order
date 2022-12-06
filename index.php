@@ -12,13 +12,22 @@
     </div>
 </section>
 <!-- fOOD sEARCH Section Ends Here -->
-
+<br><br>
 <?php
 
 if (isset($_SESSION['order'])) {
     echo $_SESSION['order'];  //Displaying Session Message
     unset($_SESSION['order']); //Removeing Session MEessage
 }
+
+
+
+        
+        if (isset($_SESSION['login'])) {
+            echo $_SESSION['login'];  //Displaying Session Message
+            unset($_SESSION['login']); //Removeing Session MEessage
+        }
+        
 
 ?>
 
@@ -137,6 +146,7 @@ if (isset($_SESSION['order'])) {
                         <a href="<?php echo SITEURL; ?>order.php?food_id=<?php echo $id; ?>" class="btn btn-primary">Order Now</a>
                     </div>
                 </div>
+
 
         <?php
             }

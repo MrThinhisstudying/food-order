@@ -1,7 +1,8 @@
 <?php include('partials-front/menu.php') ?>
     <!-- CAtegories Section Starts Here -->
     <section class="categories">
-        <div class="container">
+       <!-- <img src="./images/background_categories.jpg" alt="background_category" class="category_background"> -->
+        <div class="container"> 
             <h2 class="text-center">Explore Foods</h2>
 
             <?php
